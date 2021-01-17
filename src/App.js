@@ -30,7 +30,7 @@ function App() {
   };
   
   const fetchMovies = async (search) => {
-    const url = `http://www.omdbapi.com/?type=movie&s=${search}&apikey=e5181cf5`
+    const url = `https://www.omdbapi.com/?type=movie&s=${search}&apikey=e5181cf5`
     const response = await fetch(url); // http response
     const responseJson = await response.json();
     responseJson.Search? setMovies(responseJson.Search) : setMovies([]);
