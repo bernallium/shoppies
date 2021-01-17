@@ -1,16 +1,18 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const Nominate = ({movie, handleNominateClick, nominations}) => {
   return (
     <>
-      <button
+      <Button
+        variant={nominations? 'primary' : 'danger'}
         disabled={
           nominations && nominations.some(nomination => nomination.imdbID === movie.imdbID)
         }
         onClick={() => handleNominateClick(movie)}
       >
-        {nominations? 'Add to Nominations' : 'Remove from Nominations'}
-      </button>
+        {nominations? 'Add to Nominations' : 'Remove'}
+      </Button>
     </>
   )
 }
