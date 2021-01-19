@@ -1,4 +1,3 @@
-<br />
 <p align="center">
   <h1 align="center">Shoppies 🏆</h1>
   <p align="center">
@@ -8,7 +7,7 @@
   </p>
 </p>
 
-Add and remove movies to your Nominations list. Your list is cached in local storage and will persist across page refreshes.
+Add and remove movies to your Nominations list. If you need some time thinking about what movies to nominate, have no fear! Your list is cached in local storage and will persist across page refreshes! 🥳
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/20956525/105105315-e12c7400-5a81-11eb-9b44-dfc5e9fa7669.png"/>
