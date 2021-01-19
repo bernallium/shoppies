@@ -58,6 +58,8 @@ body {
   box-shadow: 0 2px 4px var(--accent-color-shadow), 0 8px 16px var(--accent-color-shadow);
   -webkit-box-shadow: 0 2px 4px black, 0 8px 16px black;
   transition: all 0.125s linear;
+  display: inline-table;
+  width: 1%
 }
 
 .movie:hover {
