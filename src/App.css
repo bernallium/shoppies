@@ -9,17 +9,26 @@ body {
   padding-top: 1rem;
   color: #ffffff;
   background: linear-gradient(180deg, var(--main-bg-color), black);
+  font-family: 'Open Sans';
 }
 
 .App {
   min-height: 100vh;;
 }
 
-.app-header {
+.header-container {
   text-align: center;
   margin: 2rem 0;
+}
+
+.app-header {
+  font-family: 'Limelight';
   font-weight: 600;
   font-size: 3rem;
+}
+
+a {
+  color: rgb(139, 140, 226);
 }
 
 .SearchForm {

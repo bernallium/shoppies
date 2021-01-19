@@ -7,7 +7,6 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Alert from 'react-bootstrap/Alert';
-import ProgressBar from 'react-bootstrap/ProgressBar';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -89,7 +88,12 @@ function App() {
       className="App"
       fluid
     >
-      <h1 className="app-header">The Shoppies 🏆</h1>
+      <div className="header-container">
+        <h1 className="app-header">The Shoppies 🏆</h1>
+        <p>A movie searching app powered by OMDB API, built with React</p>
+        <p>Add and remove movies to your Nominations list and have them saved to your local storage. Your list will persist across page refreshes!</p>
+        <a href="https://github.com/bernallium/shoppies">github.com/bernallium/shoppies</a>
+      </div>
       <Form
         onSubmit={e => e.preventDefault()}
         className="SearchForm"
@@ -120,13 +124,6 @@ function App() {
         />
       </Row>
       <h2>Your Nominations ({nominations.length}/5)</h2>
-      <ProgressBar
-        now={nominations.length}
-        max={5}
-        variant="success"
-        striped={true}
-        animated={true}
-      />
       <Row>
         <MovieList
           movies={nominations}
