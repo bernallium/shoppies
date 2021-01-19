@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #313131;
+  --main-bg-color: #353535;
   --accent-color-shadow:  rgb(0, 0, 0, 0.1);
   --accent-color-shadow-hover:  rgb(0, 0, 0, 0.2);
   --rounded-border-radius: 8px;
@@ -59,7 +59,8 @@ body {
   -webkit-box-shadow: 0 2px 4px black, 0 8px 16px black;
   transition: all 0.125s linear;
   display: inline-table;
-  width: 1%
+  width: 1%;
+  margin: .5rem;
 }
 
 .movie:hover {
@@ -70,4 +71,12 @@ body {
 
 .movie-title {
   min-height: 60px;
+}
+
+.first-movie {
+  margin-left: 100px;
+}
+
+.last-movie {
+  margin-right: 100px;
 }

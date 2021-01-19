@@ -4,11 +4,13 @@ import Image from 'react-bootstrap/Image';
 const MovieList = ({movies, handleNominateClick, NominateComponent, nominations}) => {
   return (
     <>
-      {movies.map((movie) =>
-        <div key={movie.imdbID} className="movie m-2">
+      {movies.map((movie, idx) => 
+        <div key={movie.imdbID} 
+          className={`movie ${idx===0 && nominations ? "first-movie" : ""}`}
+        > 
           <Image 
             src={movie.Poster} 
-            alt='movie' 
+            alt='movie'
             className="poster"
           />
           <div className="d-flex flex-column justify-content-between m-2">

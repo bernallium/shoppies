@@ -25,6 +25,13 @@ function App() {
     checkNominationThreshold(nominations);
   }, [nominations])
 
+  useEffect(() => {
+    const localStorageNominations = JSON.parse(localStorage.getItem('movie-nominations'));
+    if (localStorageNominations) {
+      setNominations(localStorageNominations);
+    }
+  }, [])
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
@@ -45,15 +52,21 @@ function App() {
   }
 
   const nominateMovie = (movie) => {
-    setNominations([...nominations, movie]);
+    const newNominationList = [...nominations, movie];
+    setNominations(newNominationList);
+    saveToLocalStorage(newNominationList);
   }
 
-  const removeFromNominations = (movie) => {
+  const removeFromNominations = (movie) => { 
     const filteredNominations = nominations.filter(
       nomination => nomination.imdbID !== movie.imdbID
     );
     setNominations(filteredNominations);
   }
+
+  const saveToLocalStorage = (nominations) => {
+    localStorage.setItem('movie-nominations', JSON.stringify(nominations))
+  };
 
   const renderAlert = () => {
     if (showAlert) {
